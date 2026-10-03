@@ -2,7 +2,7 @@
 
 Student: Rafaello Ferrari<br>
 Student ID: 2026200940<br>
-University: Unicarioca<br>
+University: UniCarioca<br>
 Course: Formal Languages<br>
 Professor: Julio Tadeu
 
