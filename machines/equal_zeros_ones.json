@@ -1,0 +1,109 @@
+{
+  "states": [
+    "backL",
+    "checkR",
+    "q0",
+    "qa",
+    "qr",
+    "scanR"
+  ],
+  "input_alphabet": [
+    "0",
+    "1"
+  ],
+  "tape_alphabet": [
+    "0",
+    "1",
+    "_"
+  ],
+  "blank": "_",
+  "start_state": "q0",
+  "accept_state": "qa",
+  "reject_state": "qr",
+  "transitions": [
+    {
+      "state": "backL",
+      "read": "0",
+      "next_state": "backL",
+      "write": "0",
+      "move": "L"
+    },
+    {
+      "state": "backL",
+      "read": "1",
+      "next_state": "backL",
+      "write": "1",
+      "move": "L"
+    },
+    {
+      "state": "backL",
+      "read": "_",
+      "next_state": "q0",
+      "write": "_",
+      "move": "R"
+    },
+    {
+      "state": "checkR",
+      "read": "0",
+      "next_state": "qr",
+      "write": "0",
+      "move": "S"
+    },
+    {
+      "state": "checkR",
+      "read": "1",
+      "next_state": "backL",
+      "write": "_",
+      "move": "L"
+    },
+    {
+      "state": "checkR",
+      "read": "_",
+      "next_state": "qr",
+      "write": "_",
+      "move": "S"
+    },
+    {
+      "state": "q0",
+      "read": "0",
+      "next_state": "scanR",
+      "write": "_",
+      "move": "R"
+    },
+    {
+      "state": "q0",
+      "read": "1",
+      "next_state": "qr",
+      "write": "1",
+      "move": "S"
+    },
+    {
+      "state": "q0",
+      "read": "_",
+      "next_state": "qa",
+      "write": "_",
+      "move": "S"
+    },
+    {
+      "state": "scanR",
+      "read": "0",
+      "next_state": "scanR",
+      "write": "0",
+      "move": "R"
+    },
+    {
+      "state": "scanR",
+      "read": "1",
+      "next_state": "scanR",
+      "write": "1",
+      "move": "R"
+    },
+    {
+      "state": "scanR",
+      "read": "_",
+      "next_state": "checkR",
+      "write": "_",
+      "move": "L"
+    }
+  ]
+}

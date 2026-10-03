@@ -1,0 +1,59 @@
+{
+  "states": [
+    "erase",
+    "find_zero",
+    "last",
+    "qa",
+    "qr"
+  ],
+  "input_alphabet": [
+    "0",
+    "1"
+  ],
+  "tape_alphabet": [
+    "0",
+    "1",
+    "_"
+  ],
+  "blank": "_",
+  "start_state": "find_zero",
+  "accept_state": "qa",
+  "reject_state": "qr",
+  "transitions": [
+    {
+      "state": "erase",
+      "read": "1",
+      "next_state": "erase",
+      "write": "1",
+      "move": "R"
+    },
+    {
+      "state": "erase",
+      "read": "_",
+      "next_state": "last",
+      "write": "_",
+      "move": "L"
+    },
+    {
+      "state": "find_zero",
+      "read": "0",
+      "next_state": "erase",
+      "write": "1",
+      "move": "R"
+    },
+    {
+      "state": "find_zero",
+      "read": "1",
+      "next_state": "find_zero",
+      "write": "1",
+      "move": "R"
+    },
+    {
+      "state": "last",
+      "read": "1",
+      "next_state": "qa",
+      "write": "_",
+      "move": "S"
+    }
+  ]
+}
