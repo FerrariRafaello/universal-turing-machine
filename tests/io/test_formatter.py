@@ -16,7 +16,7 @@ def test_format_step() -> None:
         accept_state="qa",
         reject_state="qr",
     ), "")
-    assert format_step(0, result.trace[0]) == "step 0: q0: "
+    assert format_step(0, result.trace[0]) == "step 0: q0: [_]"
 
 
 def test_format_trace_has_one_line_per_step(even_ones_machine: TuringMachine) -> None:
