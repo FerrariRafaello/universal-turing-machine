@@ -1,9 +1,9 @@
 # Universal Turing Machine
 
-Student: Rafaello Ferrari
-Student ID: 2026200940
-University: Unicarioca
-Course: Formal Languages
+Student: Rafaello Ferrari<br>
+Student ID: 2026200940<br>
+University: Unicarioca<br>
+Course: Formal Languages<br>
 Professor: Julio Tadeu
 
 ## About
