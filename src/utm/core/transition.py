@@ -42,7 +42,7 @@ class TransitionFunction(Mapping[TransitionKey, Transition]):
             table[t.key] = t
         self._table = table
 
-    def __getitem___(self, key: TransitionKey) -> Transition:
+    def __getitem__(self, key: TransitionKey) -> Transition:
         return self._table[key]
 
     def __iter__(self) -> Iterator[TransitionKey]:
