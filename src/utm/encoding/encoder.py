@@ -29,7 +29,6 @@ def encode_instance(machine: TuringMachine, input_string: str) -> str:
 
 
 def _encode_transition(t: Transition) -> str:
-    """Turns one transition into 'state,read,next_state,write,direction'."""
     return FIELD_SEP.join([t.state, t.read, t.next_state, t.write, t.move.value])
 
 
